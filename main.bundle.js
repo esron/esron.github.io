@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<nav class=\"navbar navbar-inverse\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"navbar-header\">\r\n      <a class=\"navbar-brand\" href=\"#\">Tic tac toe</a>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\r\n    </div>\r\n  </div>\r\n</nav>\r\n  \r\n<div class=\"container text-center\">    \r\n  <div class=\"row\">\r\n    <div class=\"col-sm-3\">\r\n      <div class=\"form-group\">\r\n        <label for=\"sel1\">Selecionar modo:</label>\r\n        <select class=\"form-control\" id=\"sel1\" [(ngModel)]=\"selectedGameMode\"\r\n          (ngModelChange)=\"resetBoard()\">\r\n          <option>2 jogadores</option>\r\n          <option>1 jogador</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <input type=\"button\" class=\"btn\" (click)=\"resetBoard()\" value=\"Limpar Tabuleiro\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <input type=\"button\" class=\"btn\" (click)=\"testAI()\" value=\"Testar I.A.\" [disabled]=\"buttonsActive\">\r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-6 text-center\"> \r\n      <table class=\"table table-bordered\">\r\n        <thead>\r\n          <tr>\r\n            <th colspan=\"3\" class=\"text-center\">Jogando: {{player}}</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr>\r\n            <td class=\"c00\"><input type=\"button\" [class]=\"cellColor(mainState.board[0][0])\"\r\n              value=\"{{ mainState.board[0][0] }}\" (click)=\"play(0, 0)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c01\"><input type=\"button\" [class]=\"cellColor(mainState.board[0][1])\"\r\n              value=\"{{ mainState.board[0][1] }}\" (click)=\"play(0, 1)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c02\"><input type=\"button\" [class]=\"cellColor(mainState.board[0][2])\" \r\n              value=\"{{ mainState.board[0][2] }}\" (click)=\"play(0, 2)\" [disabled]=\"buttonsActive\"></td>\r\n          </tr>\r\n          <tr>\r\n            <td class=\"c10\"><input type=\"button\" [class]=\"cellColor(mainState.board[1][0])\" \r\n              value=\"{{ mainState.board[1][0] }}\" (click)=\"play(1, 0)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c11\"><input type=\"button\" [class]=\"cellColor(mainState.board[1][1])\" \r\n              value=\"{{ mainState.board[1][1] }}\" (click)=\"play(1, 1)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c12\"><input type=\"button\" [class]=\"cellColor(mainState.board[1][2])\" \r\n              value=\"{{ mainState.board[1][2] }}\" (click)=\"play(1, 2)\" [disabled]=\"buttonsActive\"></td>\r\n          </tr>\r\n          <tr>\r\n            <td class=\"c20\"><input type=\"button\" [class]=\"cellColor(mainState.board[2][0])\" \r\n              value=\"{{ mainState.board[2][0] }}\" (click)=\"play(2, 0)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c21\"><input type=\"button\" [class]=\"cellColor(mainState.board[2][1])\" \r\n              value=\"{{ mainState.board[2][1] }}\" (click)=\"play(2, 1)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c22\"><input type=\"button\" [class]=\"cellColor(mainState.board[2][2])\" \r\n              value=\"{{ mainState.board[2][2] }}\" (click)=\"play(2, 2)\" [disabled]=\"buttonsActive\"></td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"col-sm-3\">\r\n      <h1>Placar</h1>\r\n      <table class=\"table table-bordered\">\r\n        <thead>\r\n          <tr>\r\n            <th class=\"text-center\">X</th>\r\n            <th class=\"text-center\">O</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr>\r\n            <td class=\"text-center\"> {{ xScore }} </td>\r\n            <td class=\"text-center\"> {{ oScore }} </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <input type=\"button\" class=\"btn\" value=\"Limpar Placar\" (click)=\"resetScore()\">\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-3\"></div>\r\n    <div class=\"col-sm-6\">\r\n      <h2>{{ winMessage }}</h2>\r\n    </div>\r\n    <div class=\"col-sm-3\"></div>\r\n  </div>\r\n</div>\r\n\r\n<footer class=\"container-fluid text-center\">\r\n  <p>Footer Text</p>\r\n</footer>\r\n"
+module.exports = "\r\n<nav class=\"navbar navbar-inverse\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"navbar-header\">\r\n      <a class=\"navbar-brand\" href=\"#\">Tic tac toe</a>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\r\n    </div>\r\n  </div>\r\n</nav>\r\n  \r\n<div class=\"container text-center\">    \r\n  <div class=\"row\">\r\n    <div class=\"col-sm-3\">\r\n      <div class=\"form-group\">\r\n        <label for=\"sel1\">Selecionar modo:</label>\r\n        <select class=\"form-control\" id=\"sel1\" [(ngModel)]=\"selectedGameMode\"\r\n          (ngModelChange)=\"resetBoard()\">\r\n          <option>2 jogadores</option>\r\n          <option>1 jogador</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <input type=\"button\" class=\"btn\" (click)=\"resetBoard()\" value=\"Limpar Tabuleiro\">\r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-6 text-center\"> \r\n      <table class=\"table table-bordered\">\r\n        <thead>\r\n          <tr>\r\n            <th colspan=\"3\" class=\"text-center\">Jogando: {{player}}</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr>\r\n            <td class=\"c00\"><input type=\"button\" [class]=\"cellColor(mainState.board[0][0])\"\r\n              value=\"{{ mainState.board[0][0] }}\" (click)=\"play(0, 0)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c01\"><input type=\"button\" [class]=\"cellColor(mainState.board[0][1])\"\r\n              value=\"{{ mainState.board[0][1] }}\" (click)=\"play(0, 1)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c02\"><input type=\"button\" [class]=\"cellColor(mainState.board[0][2])\" \r\n              value=\"{{ mainState.board[0][2] }}\" (click)=\"play(0, 2)\" [disabled]=\"buttonsActive\"></td>\r\n          </tr>\r\n          <tr>\r\n            <td class=\"c10\"><input type=\"button\" [class]=\"cellColor(mainState.board[1][0])\" \r\n              value=\"{{ mainState.board[1][0] }}\" (click)=\"play(1, 0)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c11\"><input type=\"button\" [class]=\"cellColor(mainState.board[1][1])\" \r\n              value=\"{{ mainState.board[1][1] }}\" (click)=\"play(1, 1)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c12\"><input type=\"button\" [class]=\"cellColor(mainState.board[1][2])\" \r\n              value=\"{{ mainState.board[1][2] }}\" (click)=\"play(1, 2)\" [disabled]=\"buttonsActive\"></td>\r\n          </tr>\r\n          <tr>\r\n            <td class=\"c20\"><input type=\"button\" [class]=\"cellColor(mainState.board[2][0])\" \r\n              value=\"{{ mainState.board[2][0] }}\" (click)=\"play(2, 0)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c21\"><input type=\"button\" [class]=\"cellColor(mainState.board[2][1])\" \r\n              value=\"{{ mainState.board[2][1] }}\" (click)=\"play(2, 1)\" [disabled]=\"buttonsActive\"></td>\r\n            <td class=\"c22\"><input type=\"button\" [class]=\"cellColor(mainState.board[2][2])\" \r\n              value=\"{{ mainState.board[2][2] }}\" (click)=\"play(2, 2)\" [disabled]=\"buttonsActive\"></td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"col-sm-3\">\r\n      <h1>Placar</h1>\r\n      <table class=\"table table-bordered\">\r\n        <thead>\r\n          <tr>\r\n            <th class=\"text-center\">X</th>\r\n            <th class=\"text-center\">O</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr>\r\n            <td class=\"text-center\"> {{ xScore }} </td>\r\n            <td class=\"text-center\"> {{ oScore }} </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <input type=\"button\" class=\"btn\" value=\"Limpar Placar\" (click)=\"resetScore()\">\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-3\"></div>\r\n    <div class=\"col-sm-6\">\r\n      <h2>{{ winMessage }}</h2>\r\n    </div>\r\n    <div class=\"col-sm-3\"></div>\r\n  </div>\r\n  <div class=\"row text-left\">\r\n    <div class=\"col-sm-2\"></div>\r\n    <div class=\"col-sm-8\">\r\n      <p>Segunda questão desafio da disciplina Inteligência Artificial ministrada pelo professor <a href=\"http://www.univasf.edu.br/~rosalvo.oliveira/\">Rosalvo  Neto</a>. Colegiado de Engenharia da Computação <a href=\" http://www.cecomp.univasf.edu.br/\">(CECOMP)</a> - Universidade Federal do Vale do São Francisco <a href=\"http://portais.univasf.edu.br/\">(UNIVASF)</a>.</p>\r\n    </div>\r\n    <div class=\"col-sm-2\"></div>\r\n  </div>\r\n</div>\r\n\r\n<footer class=\"container-fluid text-center\">\r\n  <p>Codigo fonte: <a href=\"https://github.com/esron/tic-tac-toe\">gitHub</a></p>\r\n  <p>Copyright Esron Dtamar da Silva © - 2017</p>\r\n</footer>\r\n"
 
 /***/ }),
 
@@ -70,7 +70,7 @@ var AppComponent = (function () {
         this.buttonsActive = "";
         // Escolhe entre os modos de dois jogadores e 1 jogador
         this.selectedGameMode = "2 jogadores";
-        this.mainState = new __WEBPACK_IMPORTED_MODULE_2__state__["a" /* State */]([[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']], 0, null, [0, 0]);
+        this.mainState = new __WEBPACK_IMPORTED_MODULE_2__state__["a" /* State */]([[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']], 0, [0, 0]);
     }
     AppComponent.prototype.play = function (lin, col) {
         if (this.mainState.board[lin][col] == ' ') {
@@ -163,11 +163,6 @@ var AppComponent = (function () {
             case ' ':
                 return "btn btn-lg";
         }
-    };
-    AppComponent.prototype.testAI = function () {
-        this.player = 'O';
-        var move = this.player2.play(this.mainState);
-        this.play(move[0], move[1]);
     };
     return AppComponent;
 }());
@@ -315,7 +310,7 @@ Player2Service = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return State; });
 var State = (function () {
-    function State(board, depth, parent, played) {
+    function State(board, depth, played) {
         this.board = [[], [], []];
         this.played = [0, 0];
         for (var i = 0; i < 3; i++) {
@@ -327,7 +322,6 @@ var State = (function () {
         this.played[0] = played[0];
         this.played[1] = played[1];
         this.depth = depth;
-        this.parent = parent;
     }
     State.prototype.equals = function (state) {
         for (var i = 0; i < 3; i++)
@@ -336,12 +330,8 @@ var State = (function () {
                     return false;
         return true;
     };
-    State.prototype.copy = function (state) {
-        return new State(state.board, state.depth, state.parent, state.played);
-    };
-    State.prototype.setParent = function (state) {
-        this.parent = state;
-        return this;
+    State.prototype.copy = function () {
+        return new State(this.board, this.depth, this.played);
     };
     State.prototype.setPlayed = function (i, j) {
         this.played[0] = i;
@@ -362,7 +352,7 @@ var State = (function () {
         for (var i = 0; i < 3; i++) {
             for (var j = 0; j < 3; j++) {
                 if (this.board[i][j] == ' ') {
-                    var child = this.copy(this).setParent(this);
+                    var child = this.copy();
                     child.setPlayed(i, j);
                     child.board[i][j] = player;
                     child.depth++;
