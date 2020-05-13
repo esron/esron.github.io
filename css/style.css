@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body:before {
@@ -27,9 +28,8 @@ body:before {
 }
 
 body {
-  overflow: auto;
-  position: relative;
   font-family: Arial;
+  height: 100vh;
 }
 
 a {
@@ -42,10 +42,20 @@ a:hover {
   color: whitesmoke;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .menu {
   background: rgba(255, 255, 255, 0.3);
   padding: 5px;
   box-shadow: 0 0 5px gray;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu ul {
@@ -66,6 +76,8 @@ a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 50%;
+  width: 50%;
 }
 
 footer,
@@ -73,4 +85,8 @@ footer,
 .title {
   text-align: center;
   color: white;
+}
+
+.title {
+  margin-top: 60px;
 }
