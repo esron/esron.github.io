@@ -28,7 +28,7 @@ body:before {
 }
 
 body {
-  font-family: Arial;
+  font-family: 'Fira Code', monospace;
   height: 100vh;
   color: white;
 }
@@ -95,14 +95,20 @@ header {
 .card {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 20px;
+}
+
+.card-text {
+  line-height: 2.5em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.card-text {
-  margin-left: 2em;
-  line-height: 2.5em;
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: 3em;
+  margin-top: 40px;
 }
 
 .card-text ul {
