@@ -35,7 +35,7 @@ body {
 
 @media (min-width: 300px) {
   body {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
@@ -102,6 +102,23 @@ header {
 
 .card-text {
   margin-left: 2em;
+  line-height: 2.5em;
+}
+
+.card-text ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.card-text a {
+  display: block;
+}
+
+.card-text img {
+  width: 4em;
+  height: 4em;
 }
 
 .avatar {
