@@ -121,7 +121,7 @@ header {
   height: 50%;
 }
 
-.portifolio {
+.portfolio {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,25 +130,25 @@ header {
   min-height: 100vh;
 }
 
-.portifolio .grid {
+.portfolio .grid {
   margin-top: 10px;
   display: grid;
   gap: 3em;
 }
 
 @media (min-width: 1080px) {
-  .portifolio .grid {
+  .portfolio .grid {
     grid-template-columns: repeat(2, 480px);
   }
 }
 
-.portifolio figure {
+.portfolio figure {
   text-align: center;
 }
 
 @media (max-width: 500px) {
   .card,
-  .portifolio figure img {
+  .portfolio figure img {
     width: 90vw;
   }
 }
