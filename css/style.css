@@ -94,10 +94,17 @@ header {
   display: flex;
   justify-content: space-around;
   font-weight: bold;
+  width: 100%;
 }
 
 .card-text a {
   display: block;
+  font-size: 2em;
+}
+
+.card-text a:hover {
+  display: block;
+  font-size: 2.5em;
 }
 
 .card-text img {
@@ -119,6 +126,31 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2em;
+  min-height: 100vh;
+}
+
+.portifolio .grid {
+  margin-top: 10px;
+  display: grid;
+  gap: 3em;
+}
+
+@media (min-width: 1080px) {
+  .portifolio .grid {
+    grid-template-columns: repeat(2, 480px);
+  }
+}
+
+.portifolio figure {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .card,
+  .portifolio figure img {
+    width: 90vw;
+  }
 }
 
 footer {
