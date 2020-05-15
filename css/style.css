@@ -70,6 +70,12 @@ header {
   font-size: 1.3em;
 }
 
+.menu a:hover {
+  color: teal;
+  background-color: snow;
+  border-radius: 0 0 10px 10px;
+}
+
 .card {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 20px;
@@ -128,6 +134,10 @@ header {
   align-items: center;
   padding: 2em;
   min-height: 100vh;
+}
+
+.portfolio-title {
+  margin-top: 40px;
 }
 
 .portfolio .grid {
