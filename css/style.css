@@ -15,11 +15,27 @@ body {
   body {
     font-size: 12px;
   }
+
+  .portfolio-title {
+    font-size: 2em;
+  }
+
+  .portfolio-items {
+    font-size: 2em;
+  }
 }
 
 @media (min-width: 550px) {
   body {
     font-size: 18px;
+  }
+
+  .portfolio-title {
+    font-size: 1em;
+  }
+
+  .portfolio-items {
+    font-size: 1em;
   }
 }
 
@@ -92,7 +108,7 @@ header {
 }
 
 .title {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 3em;
   margin-top: 40px;
 }
@@ -107,14 +123,14 @@ header {
 
 .card-text a {
   display: block;
-  font-size: 2em;
-  transition: font-szie, 200ms;
+  font-size: 3em;
+  transition: transform, 500ms;
 }
 
 .card-text a:active,
 .card-text a:hover {
   display: block;
-  font-size: 2.5em;
+  transform: scale(1.2);
 }
 
 .card-text img {
@@ -144,6 +160,10 @@ header {
   margin-top: 40px;
 }
 
+.portfolio-items {
+  padding: 30px;
+}
+
 .portfolio .grid {
   margin-top: 10px;
   display: grid;
@@ -162,9 +182,17 @@ header {
 
 @media (max-width: 500px) {
   .card,
-  .portfolio figure img {
+  .img-portfolio {
     width: 90vw;
   }
+}
+
+.img-portfolio {
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.1);
 }
 
 footer {
