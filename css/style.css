@@ -34,6 +34,7 @@ a {
   color: white;
 }
 
+a:active,
 a:hover {
   text-decoration: underline;
   color: whitesmoke;
@@ -68,12 +69,13 @@ header {
   display: block;
   padding: 13px;
   font-size: 1.3em;
+  transition: background-color 200ms, color 200ms;
+  border-radius: 0 0 10px 10px;
 }
 
 .menu a:hover {
   color: teal;
   background-color: snow;
-  border-radius: 0 0 10px 10px;
 }
 
 .card {
@@ -106,8 +108,10 @@ header {
 .card-text a {
   display: block;
   font-size: 2em;
+  transition: font-szie, 200ms;
 }
 
+.card-text a:active,
 .card-text a:hover {
   display: block;
   font-size: 2.5em;
