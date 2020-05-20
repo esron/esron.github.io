@@ -157,12 +157,16 @@ header {
   min-height: 100vh;
 }
 
-.portfolio-title {
-  margin-top: 40px;
+@media (min-width: 1024px) {
+  .portfolio {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.portfolio-items {
-  padding: 30px;
+.portfolio-title {
+  margin-top: 40px;
 }
 
 .portfolio .grid {
@@ -179,6 +183,14 @@ header {
 
 .portfolio figure {
   text-align: center;
+}
+
+.portfolio-items {
+  padding: 30px;
+}
+
+.portfolio-items li {
+  margin-bottom: 15px;
 }
 
 @media (max-width: 500px) {
