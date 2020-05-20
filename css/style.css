@@ -50,7 +50,6 @@ a {
   color: white;
 }
 
-a:active,
 a:hover {
   text-decoration: underline;
   color: whitesmoke;
@@ -128,7 +127,6 @@ header {
   transition: transform, 500ms;
 }
 
-.visit-card-text a:active,
 .visit-card-text a:hover {
   display: block;
   transform: scale(1.2);
@@ -204,14 +202,34 @@ header {
   top: 0;
   left: 0;
   width: 480px;
+  border-radius: 15px;
 }
 
 .card-verse {
-  color: black;
+  padding: 1em;
   background-color: white;
   height: 270px;
   width: 480px;
   transform: rotateY(180deg);
+  font-size: 1.5em;
+  border-style: dashed;
+  border-width: thick;
+  border-color: #79591b;
+}
+
+@media (min-width: 550px) {
+  .card-verse {
+    font-size: 1em;
+  }
+}
+
+.card-verse,
+.card-verse a {
+  color: black;
+}
+
+.card-verse a {
+  text-decoration: underline;
 }
 
 .portfolio figure {
@@ -231,6 +249,7 @@ header {
   height: 270px;
   width: 480px;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 @media (max-width: 500px) {
