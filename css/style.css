@@ -95,12 +95,12 @@ header {
   background-color: snow;
 }
 
-.card {
+.visit-card {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 20px;
 }
 
-.card-text {
+.visit-card-text {
   line-height: 2.5em;
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ header {
   margin-top: 40px;
 }
 
-.card-text ul {
+.visit-card-text ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -122,19 +122,19 @@ header {
   width: 100%;
 }
 
-.card-text a {
+.visit-card-text a {
   display: block;
   font-size: 3em;
   transition: transform, 500ms;
 }
 
-.card-text a:active,
-.card-text a:hover {
+.visit-card-text a:active,
+.visit-card-text a:hover {
   display: block;
   transform: scale(1.2);
 }
 
-.card-text img {
+.visit-card-text img {
   width: 4em;
   height: 4em;
 }
@@ -181,6 +181,39 @@ header {
   }
 }
 
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  width: 480px;
+}
+
+.flip-card {
+  height: 270px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-verse {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+}
+
+.card-verse {
+  color: black;
+  background-color: white;
+  height: 270px;
+  width: 480px;
+  transform: rotateY(180deg);
+}
+
 .portfolio figure {
   text-align: center;
 }
@@ -193,19 +226,22 @@ header {
   margin-bottom: 15px;
 }
 
-@media (max-width: 500px) {
-  .card,
-  .img-portfolio {
-    width: 90vw;
-  }
-}
-
 .img-portfolio {
   transition: transform 500ms;
+  height: 270px;
+  width: 480px;
+  object-fit: cover;
 }
 
-.img-portfolio:hover {
-  transform: scale(1.1);
+@media (max-width: 500px) {
+  .visit-card,
+  .flip-card,
+  .card-verse,
+  .card-front,
+  .img-portfolio,
+  .card {
+    width: 90vw;
+  }
 }
 
 footer {
